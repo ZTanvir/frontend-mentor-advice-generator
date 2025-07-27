@@ -82,3 +82,37 @@ html {
   --color-neon-green: #53ffaa;
   font-family: var(--font-manrope, sans-serif);
 }
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adviceCard {
+  background-color: var(--color-dark-grayish-blue);
+  padding: 48px;
+  border-radius: 8px;
+  width: 540px;
+}
+.adviceId {
+  color: var(--color-neon-green);
+  font-size: 13px;
+  font-weight: 800;
+}
+.advice {
+  color: var(--color-light-cyan);
+  font-size: 28px;
+  font-weight: 800;
+}
+[data-stack] {
+  --gutter: initial;
+  display: grid;
+  gap: var(--gutter, 0px);
+  align-content: start;
+}
+
+[data-center] [data-center~="center-text"] {
+  text-align: center;
+}

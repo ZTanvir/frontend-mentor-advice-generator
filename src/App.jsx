@@ -30,11 +30,21 @@ function App() {
     getAdvice();
   }, [isGenerateNewAdvice]);
 
-  if (loading) return <Loading />;
-  if (error) return <p>{error}</p>;
+  if (loading)
+    return (
+      <main>
+        <Loading />
+      </main>
+    );
+  if (error)
+    return (
+      <main>
+        <p>{error}</p>
+      </main>
+    );
 
   return (
-    <>
+    <main>
       {randomAdvice && (
         <AdviceCard
           id={randomAdvice.id}
@@ -42,7 +52,7 @@ function App() {
           handleGenerateNewAdvice={setIsGenerateNewAdvice}
         />
       )}
-    </>
+    </main>
   );
 }
 

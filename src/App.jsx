@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import AdviceCard from "./components/AdviceCard";
 
 const url = `https://api.adviceslip.com/advice`;
 
@@ -30,7 +31,9 @@ function App() {
 
   return (
     <>
-      <p>{JSON.stringify(randomAdvice)}</p>
+      {randomAdvice && (
+        <AdviceCard id={randomAdvice.id} advice={randomAdvice.advice} />
+      )}
     </>
   );
 }

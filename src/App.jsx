@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import AdviceCard from "./components/AdviceCard";
+import Loading from "./components/Loading";
 
 const url = `https://api.adviceslip.com/advice`;
 
@@ -7,6 +8,7 @@ function App() {
   const [randomAdvice, setRandomAdvice] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isGenerateNewAdvice, setIsGenerateNewAdvice] = useState(false);
 
   useEffect(() => {
     async function getAdvice() {
@@ -20,19 +22,24 @@ function App() {
       } catch (error) {
         setError(error.message);
       } finally {
+        setIsGenerateNewAdvice(false);
         setLoading(false);
       }
     }
     getAdvice();
-  }, []);
+  }, [isGenerateNewAdvice]);
 
-  if (loading) return <h1>Loading..</h1>;
+  if (loading) return <Loading />;
   if (error) return <p>{error}</p>;
 
   return (
     <>
       {randomAdvice && (
-        <AdviceCard id={randomAdvice.id} advice={randomAdvice.advice} />
+        <AdviceCard
+          id={randomAdvice.id}
+          advice={randomAdvice.advice}
+          handleGenerateNewAdvice={setIsGenerateNewAdvice}
+        />
       )}
     </>
   );

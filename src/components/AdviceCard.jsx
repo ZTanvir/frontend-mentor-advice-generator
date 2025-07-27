@@ -1,13 +1,13 @@
 import lineDividerImg from "../assets/pattern-divider-desktop.svg";
 import diceIcon from "../assets/icon-dice.svg";
 
-const AdviceCard = ({ id, advice }) => {
+const AdviceCard = ({ id, advice, handleGenerateNewAdvice }) => {
   return (
     <section data-adviceid={id}>
       <p>ADVICE #{id}</p>
       <h3>{advice}</h3>
       <img src={lineDividerImg} alt="" />
-      <button>
+      <button onClick={() => handleGenerateNewAdvice(true)}>
         <img src={diceIcon} alt="" />
       </button>
     </section>

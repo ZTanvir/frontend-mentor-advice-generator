@@ -73,3 +73,12 @@ h6 {
 #__next {
   isolation: isolate;
 }
+html {
+  --font-manrope: "Manrope";
+  --color-dark-blue: #202733;
+  --color-dark-grayish-blue: #313a48;
+  --color-grayish-blue: #4f5d74;
+  --color-light-cyan: #cee3e9;
+  --color-neon-green: #53ffaa;
+  font-family: var(--font-manrope, sans-serif);
+}

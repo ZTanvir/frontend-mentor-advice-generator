@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AdviceCard from "./components/AdviceCard";
 import Loading from "./components/Loading";
+import "./App.css";
 
 const url = `https://api.adviceslip.com/advice`;
 

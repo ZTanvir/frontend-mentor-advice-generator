@@ -6,17 +6,17 @@ const AdviceCard = ({ id, advice, handleGenerateNewAdvice }) => {
     <section
       data-center="center-text"
       data-stack
-      className="adviceCard "
+      className="adviceCard"
       data-adviceid={id}
     >
       <p className="adviceId">ADVICE #{id}</p>
       <h3 className="advice">“{advice}”</h3>
-      <img className="adviceImg" src={lineDividerImg} alt="" />
+      <img className="adviceLineImg" src={lineDividerImg} alt="" />
       <button
         className="adviceBtn"
         onClick={() => handleGenerateNewAdvice(true)}
       >
-        <img src={diceIcon} alt="" />
+        <img data-center src={diceIcon} alt="" />
       </button>
     </section>
   );

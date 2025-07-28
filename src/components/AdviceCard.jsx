@@ -1,23 +1,40 @@
 import lineDividerImg from "../assets/pattern-divider-desktop.svg";
 import diceIcon from "../assets/icon-dice.svg";
+import Loading from "./Loading";
 
-const AdviceCard = ({ id, advice, handleGenerateNewAdvice }) => {
+const AdviceCard = ({
+  randomAdvice,
+  loading,
+  setLoading,
+  handleGenerateNewAdvice,
+}) => {
   return (
     <section
       data-center="center-text"
       data-stack
       className="adviceCard"
-      data-adviceid={id}
+      data-adviceid={loading === true ? "" : randomAdvice.id}
     >
-      <p className="adviceId">ADVICE #{id}</p>
-      <h3 className="advice">“{advice}”</h3>
-      <img className="adviceLineImg" src={lineDividerImg} alt="" />
-      <button
-        className="adviceBtn"
-        onClick={() => handleGenerateNewAdvice(true)}
-      >
-        <img data-center src={diceIcon} alt="" />
-      </button>
+      {loading === true ? (
+        <div data-center>
+          <Loading />
+        </div>
+      ) : (
+        <div>
+          <p className="adviceId">ADVICE #{randomAdvice.id}</p>
+          <h3 className="advice">“{randomAdvice.advice}”</h3>
+          <img className="adviceLineImg" src={lineDividerImg} alt="" />
+          <button
+            className="adviceBtn"
+            onClick={() => {
+              handleGenerateNewAdvice(true);
+              setLoading(true);
+            }}
+          >
+            <img data-center src={diceIcon} alt="" />
+          </button>
+        </div>
+      )}
     </section>
   );
 };

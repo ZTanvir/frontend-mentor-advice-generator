@@ -26,13 +26,16 @@ Users should be able to:
 
 ### Screenshot
 
+-Mobile Screen
 ![Mobile](screenshot/mobileScreenShoot.png)
+-Tablet Screen
 ![Tablet](screenshot/tablet.png)
+-Laptop Screen
 ![laptop](screenshot/laptop.png)
 
 ### Links
 
-- Solution URL: [URL ](https://github.com/ZTanvir/frontend-mentor-advice-generator)
+- Solution URL: [CODE](https://github.com/ZTanvir/frontend-mentor-advice-generator)
 
 ## My process
 

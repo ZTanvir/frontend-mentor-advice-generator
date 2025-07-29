@@ -22,7 +22,7 @@ const AdviceCard = ({
       ) : (
         <div>
           <p className="adviceId">ADVICE #{randomAdvice.id}</p>
-          <h3 className="advice">“{randomAdvice.advice}”</h3>
+          <q className="advice">{randomAdvice.advice}</q>
           <img className="adviceLineImg" src={lineDividerImg} alt="" />
           <button
             className="adviceBtn"

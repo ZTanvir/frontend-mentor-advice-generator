@@ -163,3 +163,30 @@ body {
 [data-center~="center-text"] {
   text-align: center;
 }
+
+@media (max-width: 480px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  .adviceCard {
+    max-width: 300px;
+    margin: 8px;
+  }
+  .advice {
+    font-size: 24px;
+  }
+  .adviceId {
+    font-size: 11px;
+  }
+}
+@media (max-width: 600px) {
+  /* smartphones, Android phones, landscape iPhone */
+  .adviceCard {
+    max-width: 345px;
+    margin: 8px;
+  }
+  .advice {
+    font-size: 24px;
+  }
+  .adviceId {
+    font-size: 11px;
+  }
+}

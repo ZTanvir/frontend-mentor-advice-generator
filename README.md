@@ -26,12 +26,17 @@ Users should be able to:
 
 ### Screenshot
 
+![Mobile](screenshot/mobileScreenShoot.png)
+
 - Mobile Screen
-  ![Mobile](screenshot/mobileScreenShoot.png)
+
+![Tablet](screenshot/tablet.png)
+
 - Tablet Screen
-  ![Tablet](screenshot/tablet.png)
+
+![laptop](screenshot/laptop.png)
+
 - Laptop Screen
-  ![laptop](screenshot/laptop.png)
 
 ### Links
 
